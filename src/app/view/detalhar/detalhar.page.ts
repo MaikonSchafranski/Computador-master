@@ -26,7 +26,7 @@ export class DetalharPage implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.computadores = history.state.Computadores;
+    this.computadores = history.state.computadores;
     this.categoria = this.computadores.categoria;
     this.processador = this.computadores.processador;
     this.placaVideo = this.computadores.placaVideo;
@@ -102,6 +102,10 @@ export class DetalharPage implements OnInit {
       buttons: ['OK'],
     });
   }
+
+  voltar(){
+    this.router.navigate(['/home'])
+   }
   async presentConfirmAlert(subHeader: string, message: string) {
     const alert = await this.alertController.create({
       header: 'Cadastro de Computadores',

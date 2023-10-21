@@ -37,15 +37,18 @@
       </ion-select>
     </ion-item>
 
+
     <img src="{{this.computadores.downloadURL}}"/>
     <ion-item>
-      <ion-button size="default" color="success" shape="round" fill="outline" disabled="{{edicao}}" >
+      <ion-button size="default" color="primary" shape="round" fill="outline" disabled="{{edicao}}" >
         <input type="file" (change)="uploadFile($event.target)" />
       </ion-button>
     </ion-item>
 
-      <ion-button expand="full" (click)="editar()" disabled="{{edicao}}">Salvar</ion-button>
-      <ion-button expand="full" (click)="excluir()" disabled="{{edicao}}">Excluir</ion-button>
+      <ion-button expand="block" fill="outline" color="success" (click)="editar()" disabled="{{edicao}}">Salvar</ion-button>
+      <ion-button expand="block" fill="outline" color="danger" (click)="excluir()" disabled="{{edicao}}">Excluir</ion-button>
+      <ion-button expand="block" fill="outline" color="primary" (click)="voltar()" disabled="{{edicao}}">Voltar</ion-button>
+
 
   </ion-list>
 </ion-content>
